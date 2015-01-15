@@ -9,4 +9,22 @@ get '/' do
 end
 
 
-get '/'
+post '/login' do
+
+  @user = User.find(user_name: params[:user_name])
+
+  redirect "/users/#{@user.id}"
+
+end
+
+post '/signup' do
+
+
+  redirect "/users/#{@user.id}"
+
+end
+
+
+get '/users/:id' do
+  "Hello World!"
+end

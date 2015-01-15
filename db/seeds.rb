@@ -1,5 +1,9 @@
 require 'faker'
 
+
+
+bob = User.create(:user_name => 'bob', :password =>'hello')
+
 5.times do
   User.create(
     name: Faker::Name.name,

@@ -4,7 +4,7 @@
 
   <p>
     <form method="post" action="/login">
-      <input type="text" name="user_name">
+      <input type="text" name="user_name" value="<%= @user.username %>">
       <input type="password" name="password">
       <input type="submit" value="Login">
     </form>
@@ -12,7 +12,7 @@
 
   <p>
       <form method="post" action="/signup">
-      <input type="text" name="user_name">
+      <input type="text" name="user_name" value="<%= @user.username %>">
       <input type="password" name="password">
       <input type="submit" value="Signup">
     </form>
