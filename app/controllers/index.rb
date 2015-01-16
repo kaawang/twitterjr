@@ -44,7 +44,8 @@ end
 
 get '/users/:id' do
   if session[:user_id] == params[:id].to_i
-    @all_tweets = Tweet.pluck(:id, :content).reverse
+    @user_id = session[:user_id] 
+    @user_tweets = Tweet.pluck(:id, :content).reverse
     erb :"tweets/show"
   else
     redirect '/'
@@ -54,15 +55,16 @@ end
 
 ####### TWEETS
 
-get '/tweets/new' do
+get '/users/:id/tweets/new' do
+  @user_id = session[:user_id] 
   erb :'tweets/new_tweet_form'
 end
 
-post '/tweets/new' do
+post '/users/:id' do
+  @user_id = session[:user_id] 
   tweet = Tweet.create(params[:tweet])
-  redirect '/tweets/show'
+  redirect "/users/#{@user_id}"
 end
-
 
 
 
