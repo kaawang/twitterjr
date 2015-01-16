@@ -3,8 +3,8 @@
   <br>
   <br>
   <article class="tweets_border">
-      <% @all_tweets.each do |content|  %>
-        <ul><%= content %></ul>
+      <% @all_tweets.each do |id, content|  %>
+        <ul><%= id %> - <%= content %></ul>
       <% end %>
   </article>
 </div>
