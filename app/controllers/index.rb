@@ -44,8 +44,25 @@ end
 
 get '/users/:id' do
   if session[:user_id] == params[:id].to_i
+    @all_tweets = Tweet.pluck(:id, :content).reverse
     erb :"tweets/show"
   else
     redirect '/'
   end
 end
+
+
+####### TWEETS
+
+get '/tweets/new' do
+  erb :'tweets/new_tweet_form'
+end
+
+post '/tweets/new' do
+  tweet = Tweet.create(params[:tweet])
+  redirect '/tweets/show'
+end
+
+
+
+
