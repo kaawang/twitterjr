@@ -1,11 +1,11 @@
 <div class="container">
   <% if @errors %>
     Error because :
-    <ul>
+    <ol>
     <% @errors.each do |message| %>
       <li><%= message %></li>
     <% end  %>
-    </ul>
+    </ol>
   <% end %>
   <p>
       <form method="post" action="/users">

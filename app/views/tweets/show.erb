@@ -2,9 +2,12 @@
   <h1>Here's a list of all your Tweets!</h1>
   <br>
   <br>
+  <button>
+    <a href="/users/<%=@user_id%>/tweets/new">Click to Tweet!</a>
+  </button>
   <article class="tweets_border">
-      <% @all_tweets.each do |id, content|  %>
-        <ul><%= id %> - <%= content %></ul>
+      <% @user_tweets.each do |id, content|  %>
+        <ul><%= content %></ul>
       <% end %>
   </article>
 </div>
