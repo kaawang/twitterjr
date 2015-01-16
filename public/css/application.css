@@ -1,0 +1,12 @@
+.container{
+  text-align: center;
+}
+
+.tweets_border ul{
+  text-align: left;
+  border: dotted;
+  padding: 20px;
+  margin: 50px;
+  height: 50px;
+  width: ;
+}
