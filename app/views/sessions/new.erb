@@ -1,0 +1,10 @@
+<div class="container">
+  <%= @error if @error %>
+  <p>
+    <form method="post" action="/sessions">
+      <input type="text" name="user_name" placeholder="username" value="<%= @user.user_name %>">
+      <input type="password" name="password" placeholder="password">
+      <input type="submit" value="Login">
+    </form>
+  </p>
+</div>

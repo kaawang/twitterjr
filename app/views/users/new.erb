@@ -1,0 +1,17 @@
+<div class="container">
+  <% if @errors %>
+    Error because :
+    <ul>
+    <% @errors.each do |message| %>
+      <li><%= message %></li>
+    <% end  %>
+    </ul>
+  <% end %>
+  <p>
+      <form method="post" action="/users">
+      <input type="text" name="user_name" placeholder="username" value="<%= @user.user_name %>">
+      <input type="password" name="password" placeholder="password">
+      <input type="submit" value="Signup">
+    </form>
+  </p>
+</div>

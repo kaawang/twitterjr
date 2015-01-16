@@ -6,9 +6,7 @@ bob = User.create(:user_name => 'bob', :password =>'hello')
 
 5.times do
   User.create(
-    name: Faker::Name.name,
-    handle: Faker::Internet.user_name,
-    email: Faker::Internet.safe_email,
+    user_name: Faker::Name.name,
     password: Faker::Internet.user_name
     )
 end
