@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>Here's a list of all your Tweets!</h1>
+  <br>
+  <br>
+  <article class="tweets_border">
+      <% @all_tweets.each do |content|  %>
+        <ul><%= content %></ul>
+      <% end %>
+  </article>
+</div>
