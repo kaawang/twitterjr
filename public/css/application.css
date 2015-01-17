@@ -1,3 +1,72 @@
+body {
+   /*background: #f4f1e5;*/
+   background-image: url("http://images5.fanpop.com/image/photos/26500000/Mario-Background-nintendo-26503062-1680-1050.jpg");
+   color: #544738;
+   background-size: 100% auto;
+   /*font-family: 'DaFont';*/
+   animation: animatedBackground 80s linear infinite;
+  -moz-animation: animatedBackground 80s linear infinite;
+  -webkit-animation: animatedBackground 80s linear infinite;
+  -ms-animation: animatedBackground 80s linear infinite;
+  -o-animation: animatedBackground 80s linear infinite;
+}
+
+keyframes animatedBackground {
+  0% { background-position: 0 0; }
+  100% { background-position: -3000px 0; }
+}
+@-moz-keyframes animatedBackground {
+  0% { background-position: 0 0; }
+  100% { background-position: -3000px 0; }
+}
+@-webkit-keyframes animatedBackground {
+  0% { background-position: 0 0; }
+  100% { background-position: -3000px 0; }
+}
+@-ms-keyframes animatedBackground {
+  0% { background-position: 0 0; }
+  100% { background-position: -3000px 0; }
+}
+@-o-keyframes animatedBackground {
+  0% { background-position: 0 0; }
+  100% { background-position: -3000px 0; }
+}
+
+@font-face {
+  font-family: 'DaFont';
+  src: url('3Dumb.ttf');
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #33CCCC;
+  /*transition*/
+  -webkit-transition:All .5s ease;
+  -moz-transition:All .5s ease;
+  -o-transition:All .5s ease;
+
+  /*transform*/
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -o-transform: scale(1.5);
+}
+
+button {
+  font-family: "DaFont";
+  font-size: 20px
+}
+
+input {
+  -moz-border-radius:10px; /* Firefox */
+  -webkit-border-radius: 10px; /* Safari, Chrome */
+  -khtml-border-radius: 10px; /* KHTML */
+  border-radius: 10px; /* CSS3 */
+  behavior:url("border-radius.htc");
+}
+
 .container{
   text-align: center;
 }

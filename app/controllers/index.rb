@@ -45,7 +45,8 @@ end
 get '/users/:id' do
   if session[:user_id] == params[:id].to_i
     @user_id = session[:user_id] 
-    @user_tweets = Tweet.pluck(:id, :content).reverse
+    @user_tweets = Tweet.where(:user_id => session[:user_id]).pluck(:id, :content).reverse
+    # @user_tweets = Tweet.pluck(:id, :content).reverse
     erb :"tweets/show"
   else
     redirect '/'
@@ -61,10 +62,16 @@ get '/users/:id/tweets/new' do
 end
 
 post '/users/:id' do
-  @user_id = session[:user_id] 
-  tweet = Tweet.create(params[:tweet])
-  redirect "/users/#{@user_id}"
+  # @user_id = session[:user_id] 
+  # tweet = Tweet.create(params[:tweet])
+  # redirect "/users/#{@user_id}"
+  @user = User.find(session[:user_id])
+  @user.tweets.create(params[:tweet])   #review this after twitter demo
+  redirect "/users/#{@user.id}"
 end
 
-
+get '/logout' do
+  session[:user_id] = nil
+  erb :"sessions/logout"
+end
 
