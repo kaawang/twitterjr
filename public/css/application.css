@@ -72,7 +72,8 @@ input {
 }
 
 .tweets_border ul{
-  text-align: left;
+  background-color: white;
+  text-align: center;
   border: dotted;
   padding: 20px;
   margin: 50px;

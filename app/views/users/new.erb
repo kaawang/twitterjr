@@ -1,12 +1,14 @@
 <div class="container">
   <% if @errors %>
     Error because :
-    <ol>
+    <ul>
     <% @errors.each do |message| %>
       <li><%= message %></li>
     <% end  %>
-    </ol>
+    </ul>
   <% end %>
+
+  <h2>Create new account</h2>
   <p>
       <form method="post" action="/users">
       <input type="text" name="user_name" placeholder="username" value="<%= @user.user_name %>">

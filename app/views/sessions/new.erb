@@ -1,5 +1,7 @@
 <div class="container">
   <%= @error if @error %>
+
+  <h2>Log In</h2>
   <p>
     <form method="post" action="/sessions">
       <input type="text" name="user_name" placeholder="username" value="<%= @user.user_name %>">
